@@ -19,5 +19,6 @@ jobs:
      
     steps: 
       - checkout 
-      - run: chmod +x ./install.sh
-      - run: sudo su ./install.sh
+      - run: git clone https://github.com/asdiaira/circleci.git && cd circleci
+      - run: chmod +x deploy.sh install.sh start.sh 
+      - run: sudo ./install.sh
